@@ -42,8 +42,8 @@
 				<div class="collapse navbar-collapse"
 					id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-custom">
-						<li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="index.html">Home </a></li>
+						<li class="active"><a href="#">Portfolio<span class="sr-only">(current)</span></a></li>
 						<li><a href="#">Skills</a></li>
 						<li><a href="#">Contact</a></li>
 					</ul>
@@ -82,74 +82,34 @@
 	<!-- Introduction End -->
 		<div class="row split-line"></div>
 
-	<!-- Skills set: What I do Start-->
-		<div class="row" id="skill-set">
+		<!-- Project list Start -->
+		<div class="row" id="project-list">
 			<div class="col-xs-12 col-sm-12 col-lg-12 text-center title">
-				<h2>My Expertise</h2>
-				<h3>I can develop for all layers of website developing architecture</h3>
-				<a href="#" class="btn myBtn btn-lg" role="button">See my work</a>
+				<h2>My Projects</h2>
+				<h3>Some of my personal projects</h3>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-lg-4 text-center skill-group">
-				<img class="img-responsive skill-img-frontend">
-				<p class="skill-name">Front-end Development</p>
-					
-					<p class="skill-details">I design in the browser with HTML(5), CSS(3)
-					and a touch of JavaScript, especially strong expertise in JQuery, JQuery Mobile, 
-					JSON and Ajax . I love coding things from scratch, 
-					but I can work with front-end frameworks like AngularJS and Bootstrap too.</p>
+			<div class="col-xs-12 col-sm-12 col-lg-5 text-center">
+				<h3 class="project-name">Hotel Management System</h3>
+				<h4 class="project-summary"></h4>
+				<p class="project-description"></p>
+				<p class="project-technical"></p>
+				<a href="#" class="btn myBtn btn-lg" role="button">Visit Website</a>
+				<a href="#" class="btn myBtn btn-lg" role="button">Source Code</a>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-lg-4 text-center skill-group">
-				<img class="img-responsive skill-img-backend">
-				<p class="skill-name">Server side Scripting</p>
-					
-					<p class="skill-details">I have over three years of experience in Back-End Web Developing 
-					technologies using Java-based frameworks like Spring and Hibernate and scripting in PHP as well. 
-					I am also familar with building Web Server and Restful Services using Node.js</p>
+			<div class="col-xs-12 col-sm-12 col-lg-5 text-center project-image">
+				
 			</div>
-			<div class="col-xs-12 col-sm-4 col-lg-4 text-center skill-group">
-				<img class="img-responsive skill-img-database">
-				<p class="skill-name">Database Programming</p>
-					
-					<p class="skill-details">I have a strong expertise in the relational database languages 
-					SQL and PL/SQL in database systems Oracle and MySql such as writing scripts, procedures, and queries. 
-					I am also exploring NoSQL and using MongoDB in my personal projects</p>
+			<div class="col-xs-12 col-sm-12 col-lg-5 text-center project-item">
 			</div>
 		</div>
-	<!--Skills set: What I do End-->
-			<div class="row split-line"></div>
-	<!-- Contact info Start-->
-			<div id="contact-info">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center title">
-					<h2>Contact Information and Hours</h2>
-					<h3>I'm currently looking for new opportunities in Web Development
-						and <br/> I would love to hear about yours. 
-						Please take a few minutes to tell me about it.
-					</h3>
-				</div>
-				<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
-				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-					<div id="map"></div>
-				</div>
-				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 text-center">
-					<div class="contact-detail">
-						<a href="#" class="btn myBtn btn-lg" role="button" 
-						style="margin-bottom: 35px">Send me a message</a>
-						<br/>Email: <a href="#">anhit07@gmail.com</a> 
-						<br/>Phone:  <a href="tel:1-647-824-9078">1-647-824-9078</a>
-						<br/>Toronto, Ontario, Canada
-						<br/>
-						<br/>Monday - Friday: 9am - 7pm 
-						<br/>Saturday: 9am - 5pm
-					</div>
-				</div>
-			</div>
-	<!-- Contact info End-->
+		<!-- Project list End -->
+
 	<!-- Close fading corner Start-->
-			<div class="col-sm-8 col-lg-8 top-fading-corner-rotate">
-			</div>
-			<div class="col-sm-4 col-lg-4 top-fading-corner-rotate">
-				<img src="../images/fading_corner_ rotate.png" class="img-responsive">
-			</div>
+		<div class="col-sm-8 col-lg-8 top-fading-corner-rotate">
+		</div>
+		<div class="col-sm-4 col-lg-4 top-fading-corner-rotate">
+			<img src="../images/fading_corner_ rotate.png" class="img-responsive">
+		</div>
 	<!-- Close fading corner End-->
 <!-- Site Content End -->
 	</div>
@@ -171,22 +131,6 @@
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
-		function initMap() {
-			var myCenter = new google.maps.LatLng(43.70011, -79.4163);
-			var mapCanvas = document.getElementById("map");
-			var mapOptions = {
-				center : myCenter,
-				zoom : 10
-			};
-			var map = new google.maps.Map(mapCanvas, mapOptions);
-			var marker = new google.maps.Marker({
-				position : myCenter
-			});
-			marker.setMap(map);
-		}
 
-	</script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDE1pP7ZNjT2sAM6mte_CrBEXvfUocot6M&callback=initMap">
 	</script>
 </body>
