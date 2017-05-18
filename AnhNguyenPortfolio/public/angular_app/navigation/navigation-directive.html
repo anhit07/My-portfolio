@@ -1,0 +1,24 @@
+﻿<nav ng-controller="NavigationController as vm" ng-init="vm.init()" class="navbar navbar-default navbar-custom">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span> <span
+              class="icon-bar"></span> <span class="icon-bar"></span> <span
+              class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" id="menu">ANH NGUYEN PROFILE</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse"
+          id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-custom">
+            <li ng-class="vm.isActiveTab('home')"><a href="#/">Home <span class="sr-only">{{vm.currentTab('')}}</span></a></li>
+            <li ng-class="vm.isActiveTab('portfolio')"><a href="#/portfolio">Portfolio<span class="sr-only">{{vm.currentTab('portfolio')}}</span></a></li>
+            <li ng-class="vm.isActiveTab('contact')"><a href="#/contact">Contact<span class="sr-only">{{vm.currentTab('contact')}}</span></a></li>
+          </ul>
+        </div>
+<!-- /.navbar-collapse -->
+      </nav>
