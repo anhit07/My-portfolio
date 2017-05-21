@@ -8,10 +8,10 @@ var routes = require('./api/routes');
 
 var filePath = path.join(__dirname, 'app.js');
 var staticPath = path.join(__dirname, 'public');
-var staticAngularPath = path.join(__dirname, '../node_modules');
+var staticAngularPath = path.join(__dirname, '');
 
 //Set listening port for server
-app.set('port', 3000);
+app.set('port', process.env.PORT || 5000);
 
 //Call the function when running the mildware for any accessed files
 app.use(function(req, res, next){
@@ -22,7 +22,7 @@ app.use(function(req, res, next){
 //Using the static root path for responding
 //app.use('/public', express.static(staticPath));//subset with public folder
 app.use(express.static(staticPath));
-app.use('/node_modules', express.static(staticAngularPath));
+app.use(express.static(staticAngularPath));
 
 //Enable parsing of posted forms
 app.use(bodyParser.urlencoded({ extended : false }));
@@ -34,5 +34,5 @@ app.use('/api',routes);
 //Listen at port 3000: asynchronous method return the object of server with application variables
 var server = app.listen(app.get('port'), function(){
     var port = server.address().port
-    console.log('Something comming on port ' + port);
+    console.log('Loading Anh Nguyen Portfolio -Heroku App on port ' + port);
 });

@@ -1,0 +1,32 @@
+{
+  "name": "anh_nguyen_portfolio_heroku",
+  "version": "1.0.0",
+  "description": "new Anh Nguyen portfolio app",
+  "engines": {
+    "node": "6.10.2"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node Post guaduate/MEAN Stack/Projects/Anh Nguyen_Portfolio_Heroku/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anhit07"
+  },
+  "keywords": [
+    "mean_anh_nguyen"
+  ],
+  "author": "AnhNguyen",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-animate": "^1.6.2",
+    "angular-jwt": "^0.1.9",
+    "angular-route": "^1.6.4",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "nodemailer": "^4.0.1",
+    "serve-favicon": "^2.4.3"
+  }
+}
