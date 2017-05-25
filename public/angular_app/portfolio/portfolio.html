@@ -1,48 +1,183 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(window).scrollTop($('#project-list').offset().top - 70);
+		//Mobile
+		if ($(window).width() <= 319) {
+			$("[data-viewport]").each(function() {
+				var viewport = $(this).data("viewport");
+				if (viewport === 'desktop') {
+					$(this).css('display', 'none');
+				}
+				if (viewport === 'mobile') {
+					$(this).css('display', 'inline');
+				}
+			});
+		}
+
+		if ($(window).width() >= 320 && $(window).width() <= 767) {
+			$("[data-viewport]").each(function() {
+				var viewport = $(this).data("viewport");
+				if (viewport === 'desktop') {
+					$(this).css('display', 'none');
+				}
+				if (viewport === 'mobile') {
+					$(this).css('display', 'inline');
+				}
+			});
+		}
+
+		if ($(window).width() >= 768) {
+			$("[data-viewport]").each(function() {
+				var viewport = $(this).data("viewport");
+				if (viewport === 'desktop') {
+					$(this).css('display', 'inline');
+				}
+				if (viewport === 'mobile') {
+					$(this).css('display', 'none');
+				}
+			});
+		}
+	});
+</script>
 <!-- Project list Start -->
-<div class="row" id="project-list" >
-	<div class="col-xs-12 col-sm-12 col-lg-12 text-center title" style="margin-bottom: 50px">
+<div class="row" id="project-list">
+	<div class="col-xs-12 col-sm-12 col-lg-12 text-center title"
+		style="margin-bottom: 50px">
 		<h2>My Projects</h2>
-		<h3>Some of my personal projects</h3>
+		<h3>Some of my personal code</h3>
 	</div>
-	<div class="col-xs-12 col-sm-6 col-lg-6 project-info" >
-		<h3>Hotel Management System</h3>
-		<ul><li>Full Stack Web application with MEAN stack</li></ul>
-		<h4>Hotel Management System is a website used to manage the hotel information with Restful services
-		including the following functionalities: User registration and authentication,
-		displaying the list of the existing hotels, 
-		displaying, creating and updating information for a particular hotel.
-		and displaying, creating and updating the customer reviews for a hotel.</h4>
-		<h5>Built with:</h5>
-		<p>Front-end: HTML5, CSS3, AngularJS | Back-end: NodeJS | Database: NoSQL - MongoDB<p>
-	</div>
-	<div class="col-xs-12 col-sm-6 col-lg-6 text-center project-image" style="margin-bottom: 50px;">
-		<img src="../images/project-item.jpg" class="img-responsive">
-		<br/>
-		<a href="#" class="btn myBtn btn-lg" role="button" style="margin:10px 5px">Visit Website</a>
-		<a href="#" class="btn myBtn btn-lg" role="button" style="margin:10px 5px"><i class="fa fa-github" aria-hidden="true"></i> Source Code</a>
-	</div>
-	<div class="row split-line" style="margin-bottom: 100px"></div>
-	<div class="col-xs-12 col-sm-6 col-lg-6 text-center project-image">
-		<img src="../images/project-item.jpg" class="img-responsive">
-		<br/>
-		<a href="#" class="btn myBtn btn-lg" role="button" style="margin:10px 5px">Visit Website</a>
-		<a href="#" class="btn myBtn btn-lg" role="button" style="margin:10px 5px"><i class="fa fa-github" aria-hidden="true"></i> Source Code</a>
-	</div>
-	<div class="col-xs-12 col-sm-6 col-lg-6 project-info" >
-		<h3>Hotel Management System</h3>
-		<ul><li>Full Stack Web application with MEAN stack</li></ul>
-		<h4>Hotel Management System is a website used to manage the hotel information with Restful services
-		including the following functionalities: User registration and authentication,
-		displaying the list of the existing hotels, 
-		displaying, creating and updating information for a particular hotel.
-		and displaying, creating and updating the customer reviews for a hotel.</h4>
-		<h5>Built with:</h5>
-		<p>Front-end: HTML5, CSS3, AngularJS | Back-end: NodeJS | Database: NoSQL - MongoDB<p>
-	</div>
+	<!-- Hotel Management Start -->
+		<div class="col-xs-12 col-sm-6 col-lg-6 project-info">
+			<h3>Hotel Management System</h3>
+			<ul>
+				<li>Full Stack Web application - MEAN stack</li>
+			</ul>
+			<h4>Hotel Management System is a website used to manage the hotel
+				information. The system provides Restful services including the following
+				functionalities: User registration and authentication, displaying the
+				list of the existing hotels, displaying, creating and updating
+				information for a particular hotel. and displaying, creating and
+				updating the customer reviews for a hotel.</h4>
+			<h5>Built with:</h5>
+			<p>
+				Front-end: HTML5, CSS3, AngularJS<br />Back-end: NodeJS <br />Database:
+				NoSQL - MongoDB
+			<p>
+
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-lg-6 text-center mobile" data-viewport="mobile" style="margin: 20px 0px">
+			<a href="#" class="btn myBtn btn-lg visit-web" role="button">Visit Website</a>
+			<a href="https://github.com/anhit07/MEAN-STACK-LEARNING" class="btn myBtn btn-lg" 
+			role="button"><i class="fa fa-github" aria-hidden="true">
+				</i> Source Code
+			</a>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-lg-6 text-center project-image" data-viewport="desktop">
+			<img src="../images/project-item.jpg" class="img-responsive"> <br />
+			<a href="#" class="btn myBtn btn-lg visit-web" role="button">Visit Website</a> 
+			<a href="https://github.com/anhit07/MEAN-STACK-LEARNING"
+				class="btn myBtn btn-lg" role="button">
+				<i class="fa fa-github" aria-hidden="true"></i> Source Code
+			</a>
+		</div>
+	<!-- Hotel Management End -->
+
+	<!-- Spring - Hibernate Web Applicaton Start -->
+		<div class="row split-line" style="margin-bottom: 50px"></div>
+
+		<div class="col-xs-12 col-sm-6 col-lg-6 text-center project-image" data-viewport="desktop">
+			<img src="../images/project-item.jpg" class="img-responsive"> <br />
+			<a href="#" class="btn myBtn btn-lg visit-web" role="button">Visit Website</a> 
+			<a href="https://github.com/anhit07/Spring-Hibernate-Web-Application/tree/master/Hibernate-spring-web"
+			class="btn myBtn btn-lg" role="button">
+				<i class="fa fa-github" aria-hidden="true"></i> Source Code
+			</a>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-lg-6 project-info">
+			<h3>Spring - Hibernate Web Applicaton</h3>
+			<ul>
+				<li>Full Stack Web application - Spring-Hibernate</li>
+			</ul>
+			<h4>A system receives offers and messages from customers.
+			The system also allows user to register account and login to leave their offers.</h4>
+			<h5>Built with:</h5>
+			<p>
+				Front-end: HTML5, JSP, CSS3, Jquery <br />Back-end: Spring MVC,
+				Spring Security, Spring Webflow Hibernate, Aspect-oriented
+				programming(AOP), Log4J and JUnit.<br />Database: SQL - MySql
+			<p>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-lg-6 text-center mobile" data-viewport="mobile" style="margin: 20px 0px">
+			<a href="#" class="btn myBtn btn-lg visit-web" role="button">Visit Website</a> 
+			<a href="https://github.com/anhit07/Spring-Hibernate-Web-Application/tree/master/Hibernate-spring-web"
+			class="btn myBtn btn-lg" role="button">
+				<i class="fa fa-github" aria-hidden="true"></i> Source Code
+			</a>
+		</div>
+	<!-- Spring - Hibernate Web Applicaton End -->
+
+	<!-- My portfolio Start -->
+		<div class="row split-line" style="margin-bottom: 50px"></div>
+		<div class="col-xs-12 col-sm-6 col-lg-6 project-info">
+			<h3>My Portfolio</h3>
+			<ul>
+				<li>Full Stack Web application</li>
+			</ul>
+			<h4>This is my current portfolio web site to 
+			display my profile, a list of my sample projects/code and the links to source code on my Github
+			account and my contact information as well. The websile also allows other users to leave me a message</h4>
+			<h5>Built with:</h5>
+			<p>
+				Front-end: HTML5, CSS3, AngularJS, Boostrap<br />Back-end: NodeJS <br />
+			<p>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-lg-6 text-center mobile" data-viewport="mobile" style="margin: 20px 0px">
+			<a href="#" class="btn myBtn btn-lg visit-web" role="button">Visit Website</a> 
+			<a href="https://github.com/anhit07/My-portfolio"class="btn myBtn btn-lg" 
+			role="button"><i class="fa fa-github" aria-hidden="true"></i> Source Code</a>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-lg-6 text-center project-image" data-viewport="desktop">
+			<img src="../images/project-item.jpg" class="img-responsive"> <br />
+			<a href="#" class="btn myBtn btn-lg visit-web" role="button">Visit Website</a> 
+			<a href="https://github.com/anhit07/My-portfolio"
+				class="btn myBtn btn-lg" role="button">
+				<i class="fa fa-github" aria-hidden="true"></i> Source Code
+			</a>
+		</div>
+	<!-- My portfolio End -->
+
+	<!-- Javascript Algorithm Scripting Start -->
+		<div class="row split-line" style="margin-bottom: 50px"></div>
+		<div class="col-xs-12 col-sm-6 col-lg-6 text-center project-image" data-viewport="desktop">
+			<img src="../images/project-item.jpg" class="img-responsive"> <br />
+			<a href="#" class="btn myBtn btn-lg visit-web" role="button">Visit Website</a> 
+			<a href="https://github.com/anhit07/Javascript-Algorithm-Scripting"
+				class="btn myBtn btn-lg" role="button"><i
+				class="fa fa-github" aria-hidden="true"></i> Source Code</a>
+		</div>
+	
+		<div class="col-xs-12 col-sm-6 col-lg-6 project-info">
+			<h3>Javascript Algorithm Scripting</h3>
+			<ul>
+				<li>Javascript code</li>
+			</ul>
+			<h4>Some of Javascript Algorithms Challenge I have tried and display the solution</h4>
+			<h5>Built with:</h5>
+			<p>Front-end: HTML5, CSS3, Bootstrap, Javascript
+			<p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-lg-6 text-center mobile" data-viewport="mobile" style="margin: 20px 0px">
+			<a href="#" class="btn myBtn btn-lg visit-web" role="button">Visit Website</a>
+			<a href="https://github.com/anhit07/Javascript-Algorithm-Scripting"
+				class="btn myBtn btn-lg" role="button" ><i
+				class="fa fa-github" aria-hidden="true"></i> Source Code</a>
+		</div>
+	<!-- Javascript Algorithm Scripting End -->
 </div>
 <!-- Project list End -->
-<script type="text/javascript">
-$(document).ready(function(){
-     $(window).scrollTop($('#project-list').offset().top - 70);
-});
-</script>
