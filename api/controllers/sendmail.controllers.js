@@ -1,5 +1,7 @@
 'use strict';
 const nodemailer = require('nodemailer');
+require('dotenv').load();
+
 
 module.exports.sendaMail = function(req, res){
 
@@ -7,11 +9,11 @@ module.exports.sendaMail = function(req, res){
     var senderEmail = req.body.senderEmail;
     var subject =  req.body.subject;
     var message = req.body.message;
-    var toAddress = "anhit07@gmail.com";
 
-    var service = "gmail";
-    var userServer = "home.carpenter2017@gmail.com";
-    var pass = "carpenter17";
+    var toAddress = process.env.toAddress;
+    var service = process.env.mailService;
+    var userServer = process.env.userServer;
+    var pass = process.env.userPass;
     
   
     if(senderEmail !== undefined && senderEmail !== ''){
